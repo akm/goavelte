@@ -1,0 +1,20 @@
+{
+  "name": "goavelte",
+  "version": "0.1.0",
+  "description": "Development support for Goa and SvelteKit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/akm/goavelte"
+  },
+  "keywords": [
+    "goa",
+    "svelte",
+    "sveltekit"
+  ],
+  "author": "akm2000",
+  "license": "MIT"
+}
