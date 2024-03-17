@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "description": "Development support for Goa and SvelteKit",
   "main": "index.js",
+  "bin": {
+    "goavelte": "./bin/goavelte.js"
+  },
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
@@ -15,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/akm/goavelte"
+    "url": "https://github.com/akm/goavelte"
   },
   "keywords": [
     "goa",
