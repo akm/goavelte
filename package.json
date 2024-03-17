@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "description": "Development support for Goa and SvelteKit",
   "main": "index.js",
+  "bin": {
+    "goavelte": "./bin/goavelte.js"
+  },
+  "files": [
+    "dist/**",
+    "makefiles/**"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/akm/goavelte"
+    "url": "https://github.com/akm/goavelte"
   },
   "keywords": [
     "goa",
@@ -16,5 +30,10 @@
     "sveltekit"
   ],
   "author": "akm2000",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gts": "^5.2.0",
+    "typescript": "~5.2.0",
+    "@types/node": "20.8.2"
+  }
 }
