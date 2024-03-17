@@ -1,33 +1,20 @@
-console.log('Try npm run lint/fix!');
+const {cwd, argv} = require('node:process');
+const {resolve} = require('node:path');
 
-const longString =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
+// argv[0] is the path to the node executable
+// argv[1] is the path to the script being executed
+// argv[2] is the first argument after the script name
+// argv[3] is the second argument after the script name, and so on
 
-const trailing = 'Semicolon';
-
-const why = {am: 'I tabbed?'};
-
-const iWish = "I didn't have a trailing space...";
-
-const sicilian = true;
-
-const vizzini = sicilian ? !sicilian : sicilian;
-
-const re = /foo {3}bar/;
-
-export function doSomeStuff(
-  withThis: string,
-  andThat: string,
-  andThose: string[]
-) {
-  //function on one line
-  if (!andThose.length) {
-    return false;
-  }
-  console.log(withThis);
-  console.log(andThat);
-  console.dir(andThose);
-  console.log(longString, trailing, why, iWish, vizzini, re);
-  return;
+switch (argv[2]) {
+  case 'dir':
+    console.log(resolve(__dirname, '..'));
+    break;
+  case 'debug':
+    console.log('__dirname', __dirname);
+    console.log('process.cwd()', cwd());
+    console.log('argv', argv);
+    break;
+  default:
+    console.log('Unknown command');
 }
-// TODO: more examples
