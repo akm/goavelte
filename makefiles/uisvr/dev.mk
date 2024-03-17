@@ -15,4 +15,4 @@ dev_servers:
 
 .PHONY: dev_run
 dev_run:
-	$(DEV_ENVS_BASE) $(DEV_ENVS) npx vite dev
+	$(DEV_ENVS_BASE) $(DEV_ENVS) npx vite dev --port $(APP_PORT_UISVR_HTTP_dev)
